@@ -1,48 +1,54 @@
+/* Configurações gerais da página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Define a fonte do texto */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centraliza os elementos na tela */
     justify-content: center;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-    margin: 0;
+    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+    background-color: #f4f4f4; /* Define uma cor de fundo */
+    margin: 0; /* Remove margens externas padrão do navegador */
 }
 
+/* Estilizando a área do cabeçalho */
 .header {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* Espaço entre os elementos */
     margin-bottom: 20px;
 }
 
+/* Estilos dos botões */
 button {
     padding: 10px 15px;
     border: none;
     background-color: #3498db;
     color: white;
     font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
+    cursor: pointer; /* Muda o cursor para "mãozinha" ao passar por cima */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    transition: 0.3s; /* Animação suave ao passar o mouse */
 }
 
+/* Efeito de hover (quando o mouse passa por cima) */
 button:hover {
     background-color: #2980b9;
 }
 
+/* Estilizando a área do calendário */
 .calendar {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, 1fr); /* Cria 7 colunas para representar os dias da semana */
     gap: 2px;
-    width: 90vw; /* Agora ocupa quase toda a largura da tela */
-    max-width: 1400px; /* Defini um limite para telas muito grandes */
+    width: 90vw; /* Faz com que o calendário ocupe quase toda a largura da tela */
+    max-width: 1400px; /* Define um limite para telas muito grandes */
     background: white;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px;
 }
 
+/* Estilizando cada dia do calendário */
 .day {
     background: white;
     min-height: 120px;
@@ -50,26 +56,20 @@ button:hover {
     text-align: left;
     font-weight: bold;
     padding: 10px;
-    font-size: 16px; /* Aumentando a fonte para melhor visualização */
+    font-size: 16px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     position: relative;
+    min-width: 150px; /* Largura mínima para os dias */
 }
 
-/* Aumentando os retângulos para os lados */
-.day {
-    min-width: 150px; /* Definindo uma largura mínima para os dias */
-}
-
-/* Responsivo */
+/* Ajustes para telas menores */
 @media (max-width: 1024px) {
     .calendar {
         width: 95vw;
     }
-    
     .day {
-        min-width: auto;
         font-size: 14px;
         min-height: 100px;
     }
@@ -79,7 +79,6 @@ button:hover {
     .calendar {
         grid-template-columns: repeat(7, minmax(40px, 1fr));
     }
-
     .day {
         min-height: 80px;
         font-size: 12px;

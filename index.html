@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendário</title>
-    <script src="https://apis.google.com/js/api.js"></script>
-    <script src="https://alcdn.msauth.net/browser/2.19.0/js/msal-browser.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Conectando o CSS para estilizar a página -->
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <button class="nav-btn" onclick="prevMonth()">&#9665;</button>
-            <h2 id="monthYear"></h2>
-            <button class="nav-btn" onclick="nextMonth()">&#9655;</button>
-        </div>
 
-        <div class="buttons">
-            <button onclick="authenticateGoogle()">📅 Google</button>
-            <button onclick="authenticateMicrosoft()">📅 Microsoft</button>
-        </div>
-
-        <div class="calendar" id="calendar"></div>
+    <!-- Cabeçalho com os botões de navegação -->
+    <div class="header">
+        <button id="prevMonth">◀</button> <!-- Botão para voltar um mês -->
+        <h1 id="monthYear"></h1> <!-- Título que mostra o mês e o ano atual -->
+        <button id="nextMonth">▶</button> <!-- Botão para avançar um mês -->
     </div>
-    
-    <script src="script.js"></script>
+
+    <!-- Botões para integração com Google e Microsoft -->
+    <div class="calendar-buttons">
+        <button id="googleBtn">Google</button>
+        <button id="microsoftBtn">Microsoft</button>
+    </div>
+
+    <!-- Área onde o calendário será gerado dinamicamente via JavaScript -->
+    <div class="calendar" id="calendar"></div>
+
+    <script src="script.js"></script> <!-- Conectando o JavaScript para adicionar funcionalidades -->
 </body>
 </html>
